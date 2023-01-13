@@ -1,38 +1,106 @@
-.App {
+* {
+  font-family: Helvetica;
+}
+
+body {
+  background-color: #f5f9fc;
+}
+
+.container {
+  background-color: #d9edfd;
+  max-width: 800px;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+h1 {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  color: #006ec5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  margin: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn {
+  background-color: #006ec5;
+  padding: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form-control {
+  padding: 10px;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.cloudy {
+  max-width: 100px;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cloudysmaller {
+  max-width: 70px;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.sneaky {
+  font-size: 30px;
+  color: #006ec5;
+  font-weight: bolder;
+  margin-top: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.temperature {
+  font-size: 50px;
+  color: #006ec5;
+  font-weight: bolder;
+  margin-top: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h5 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+.biggertemp {
+  font-size: 24px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  color: #006ec5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.smallertemp {
+  font-size: 16px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sneaky .active {
+  color: #006ec5;
+  cursor: default;
+  text-decoration: none;
+}
+
+.sneaky .active:hover {
+  text-decoration: none;
+}
+
+a {
+  color: #006ec5;
+}
+
+.col-6 {
+  margin-left: 30px;
 }
