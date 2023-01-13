@@ -88,7 +88,7 @@ export default function Forecast() {
         </div>
         <br />
         <p>
-          <a href="www.google.com">Open-source</a> code by Beatriz St.Aubyn
+          <a href="https://github.com/Yawn93/react-weather-app">Open-source</a> code by Beatriz St.Aubyn
         </p>
       </div>
     </div>
