@@ -1,6 +1,7 @@
 import './App.css';
 import axios from "axios";
 import React, { useState } from "react";
+import FormattedDate from './FormattedDate.js'
 
 export default function App(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -62,7 +63,7 @@ export default function App(props) {
       <div className="row">
         <div className="col-6">
           <h2>{weatherData.city}</h2>
-          <p>{weatherData.date}</p>
+          <p><FormattedDate date={weatherData.date} /></p>
           <p>
             Humidity: <span className="humidity">{weatherData.humidity}</span>%
             <br />
