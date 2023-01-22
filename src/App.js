@@ -63,10 +63,12 @@ export default function App(props) {
         </div>
       </form>
       <WeatherInfo data={weatherData}/>
+      <br />
       <Forecast coordinates={weatherData.coordinates}/>
-      <p>
-          <a href="https://github.com/Yawn93/react-weather-app">Open-source</a> code by Beatriz St.Aubyn
-        </p>
+      <br />
+      <p className="footer">
+        Made by Beatriz St.Aubyn. Check the <a href="https://github.com/Yawn93/react-weather-app">open-source code</a>.
+      </p>
     </div>
   );
 } else {
