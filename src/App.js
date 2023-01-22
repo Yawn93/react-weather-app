@@ -3,6 +3,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import WeatherInfo from './Weatherinfo.js'
 
+
 export default function App(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
@@ -61,6 +62,9 @@ export default function App(props) {
         </div>
       </form>
       <WeatherInfo data={weatherData}/>
+      <p>
+          <a href="https://github.com/Yawn93/react-weather-app">Open-source</a> code by Beatriz St.Aubyn
+        </p>
     </div>
   );
 } else {
