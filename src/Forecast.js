@@ -43,6 +43,7 @@ export default function Forecast(props) {
           </div>
         </div>
       );
+      
     } else {
       load();
   

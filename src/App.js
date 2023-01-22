@@ -63,7 +63,7 @@ export default function App(props) {
         </div>
       </form>
       <WeatherInfo data={weatherData}/>
-      <Forecast />
+      <Forecast coordinates={weatherData.coordinates}/>
       <p>
           <a href="https://github.com/Yawn93/react-weather-app">Open-source</a> code by Beatriz St.Aubyn
         </p>
