@@ -1,7 +1,7 @@
 import './App.css';
 import axios from "axios";
 import React, { useState } from "react";
-import FormattedDate from './FormattedDate.js'
+import WeatherInfo from './Weatherinfo.js'
 
 export default function App(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -32,7 +32,7 @@ export default function App(props) {
 
   function search() {
     const apiKey = "a9cbe15c4bc17314f8d7985a3c6af64c";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -60,37 +60,7 @@ export default function App(props) {
           </div>
         </div>
       </form>
-      <div className="row">
-        <div className="col-6">
-          <h2>{weatherData.city}</h2>
-          <p><FormattedDate date={weatherData.date} /></p>
-          <p>
-            Humidity: <span className="humidity">{weatherData.humidity}</span>%
-            <br />
-            Wind: <span className="wind">{weatherData.wind}</span>km/h
-          </p>
-        </div>
-        <div className="col-3">
-          <p className="sneaky">
-            <span className="sneaky">
-              {weatherData.description}
-            </span>
-            <br />
-            <div className="sneaky">
-              <strong className="temperature"></strong>
-              <span className="sneaky">{Math.round(weatherData.temperature)}°C | ºF</span>
-            </div>
-          </p>
-        </div>
-        <div className="col-2">
-          <img
-            src={weatherData.icon}
-            alt=""
-            id="icon"
-            className="cloudy"
-          />
-        </div>
-      </div>
+      <WeatherInfo data={weatherData}/>
     </div>
   );
 } else {
